@@ -1,0 +1,60 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+        }
+    },
+    "rules": {
+        // allow creating new instance without assigning to a variable
+        "no-new": "off",
+        // allow variables to start with '_'
+        "no-underscore-dangle": "off",
+        // enforce brackets after => in arrow-function (as typescript does)
+        "arrow-body-style": [
+            "error",
+            "always"
+        ],
+        // define unused vars config, allow vars to start with '_'
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": false,
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        // Require use of the `import { foo } from "bar";` form instead of `import foo = require("bar");`
+        "@typescript-eslint/no-require-imports": [
+            "error"
+        ],
+        // require .js and .json extensions when importing
+        "import/extensions": [
+            "error",
+            {
+                "ts": "never",
+                "js": "always",
+                "json": "always"
+            }
+        ],
+        // do not require "export default"
+        "import/prefer-default-export": "off"
+    }
+}
