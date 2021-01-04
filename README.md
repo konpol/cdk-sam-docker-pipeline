@@ -27,7 +27,8 @@ The key ressources:
 
 #### Create git-user and push to CodeCommit
 
-Please create your git credentials and push this project to the new created CodeCommit repository
+Please create your git credentials and push this project to the new created CodeCommit repository.
+
 More information about CodeCommit setup you can find here:
 https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up.html#setting-up-standard
 
@@ -41,6 +42,7 @@ https://docs.aws.amazon.com/cdk/latest/guide/codepipeline_example.html
 ### SAM Project
 
 The whole SAM package was generated directly in the 'lib' project folder using 'sam init --package-type Image'
+
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-init.html
 
 ## Magic!
